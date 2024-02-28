@@ -1,58 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VANZEL STORE</title>
-    <link rel="stylesheet" href="./src/css/output.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VANZEL STORE</title>
+  <link rel="stylesheet" href="./src/css/output.css">
 </head>
+
 <body class="bg-[#F5F3F4]">
-   <!-- header start -->
-   <section>
-    <section id="beranda"
-    class="pt-8  lg:pt-0 dark:bg-gradient-to-tl dark:from-slate-800">
+
+  <!-- navbar satrt -->
+  <header class="bg-transparent absolute  top-0 left-0  w-full flex items-center z-10">
+    <div class="container">
+      <div class="flex items-center justify-between relative">
+        <div class="px-4">
+          <a href="#home">
+            <img src="public/assets/logo.webp" alt="" class="w-24 block py-6 sm:w-20 md:w-24 lg:w-36">
+          </a>
+        </div>
+        <div class="px-4 flex items-center ">
+          <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+            <span class="hamburger-line transition duration-300 ease-in-out origin-top-left dark:bg-white"></span>
+            <span class="hamburger-line transition duration-300 ease-in-out dark:bg-white"></span>
+            <span class="hamburger-line transition duration-300 ease-in-out  origin-bottom-left dark:bg-white"></span>
+          </button>
+
+
+          <nav id="nav-menu"
+            class="hidden absolute py-5 bg-white shadow-lg
+        rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-slate-600 dark:lg:bg-transparent">
+            <ul class="block lg:flex">
+              <li class="group">
+                <a href="#beranda" class="text-base text-black py-2 mx-8 flex
+            group-hover:text-textKu font-semibold  lg:text-lg dark:text-white dark:group-hover:text-[#83c3ff]">Home</a>
+              </li>
+              <li class="group">
+                <a href="#profil" class="text-base text-black py-2 mx-8 flex
+            group-hover:text-textKu font-semibold lg:text-lg dark:text-white dark:group-hover:text-[#83c3ff]">Aboute
+                  Me</a>
+              </li>
+              <li class="group">
+                <a href="#portofolio"
+                  class="text-base text-black py-2 mx-8 flex
+              group-hover:text-textKu font-semibold lg:text-lg dark:text-white dark:group-hover:text-[#83c3ff]">Produk</a>
+              </li>
+              <!-- <li class="group">
+              <a href="#ulasan" class="text-base text-black py-2 mx-8 flex
+              group-hover:text-textKu font-semibold lg:text-lg">Clients</a>
+            </li> -->
+              <li class="group">
+                <a href="#contact"
+                  class="text-base text-black py-2 mx-8 flex
+              group-hover:text-textKu font-semibold lg:text-lg  dark:text-white dark:group-hover:text-[#83c3ff]">Contact Us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <a href="#" class="w-10 h-10 bg-unggu rounded-full flex items-center justify-center">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-7">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M8.41799 3.25089C8.69867 2.65917 9.30155 2.25 10 2.25H14C14.6984 2.25 15.3013 2.65917 15.582 3.25089C16.2655 3.25586 16.7983 3.28724 17.2738 3.47309C17.842 3.69516 18.3362 4.07266 18.6999 4.56242C19.0668 5.0565 19.2391 5.68979 19.4762 6.56144L20.2181 9.28272L20.4985 10.124C20.5065 10.1339 20.5144 10.1438 20.5222 10.1539C21.4231 11.3076 20.9941 13.0235 20.1362 16.4553C19.5905 18.638 19.3176 19.7293 18.5039 20.3647C17.6901 21.0001 16.5652 21.0001 14.3153 21.0001H9.68462C7.43476 21.0001 6.30983 21.0001 5.49605 20.3647C4.68227 19.7293 4.40943 18.638 3.86376 16.4553C3.00581 13.0235 2.57684 11.3076 3.47767 10.1539C3.48555 10.1438 3.4935 10.1338 3.50152 10.1239L3.7819 9.28271L4.52384 6.56145C4.76092 5.6898 4.93316 5.0565 5.30009 4.56242C5.66381 4.07266 6.15802 3.69516 6.72621 3.4731C7.20175 3.28724 7.73447 3.25586 8.41799 3.25089ZM8.41951 4.75231C7.75763 4.759 7.49204 4.78427 7.27224 4.87018C6.96629 4.98976 6.70018 5.19303 6.50433 5.45674C6.32822 5.69388 6.22488 6.0252 5.93398 7.09206L5.36442 9.18091C6.38451 9.00012 7.77753 9.00012 9.68462 9.00012H14.3153C16.2224 9.00012 17.6155 9.00012 18.6356 9.18092L18.066 7.09206C17.7751 6.0252 17.6718 5.69388 17.4957 5.45674C17.2998 5.19303 17.0337 4.98976 16.7278 4.87018C16.508 4.78427 16.2424 4.759 15.5805 4.75231C15.2992 5.3423 14.6972 5.75 14 5.75H10C9.30281 5.75 8.70084 5.3423 8.41951 4.75231Z"
+                fill="#ffffff"></path>
+            </g>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- navbar end -->
+
+  <!-- header start -->
+  <section id="beranda" class="pt-8  lg:pt-0 dark:bg-gradient-to-tl dark:from-slate-800">
     <div class="relative">
-      <img src="public/asset/bg.webp" alt="" class=" hidden lg:flex absolute bottom-0 left-0 dark:hidden">
-      <div class="container lg:pt-24 pt-12 md:pb-28">
+      <div class="container lg:pt-24 pt-12 md:pb-32">
         <div class="flex flex-wrap">
           <div class=" w-full  mx-auto px-5 py-3 lg:w-1/2">
             <div class="lg:absolute">
               <h1
-                class="text-2xl font-bold text-dark   sm:text-4xl lg:text-7xl  lg:max-w-full  lg:mt-28 dark:text-white">
-                Cari yang Premium  <br> 
+                class="text-2xl font-bold text-dark   sm:text-4xl lg:text-8xl  lg:max-w-full  lg:mt-44 dark:text-white">
+                Cari yang Premium <br>
               </h1>
-              <h1 class="text-textKu text-5xl mt-16 sm:text-6xl lg:text-9xl dark:text-biru"
-                  style="text-shadow: 2px 3px 2px rgb(192, 185, 192)">
-                  Satset tanpa repot!
-                </h1>
-              <h2 class="text-slate-600 text-lg font-semibold mt-2 sm:text-xl lg:text-6xl lg:mt-5 dark:text-slate-100">
-                Frontend Developer & <br class="hidden lg:flex"> <span class="text-slate-700 dark:text-white">Make-up
-                  Consultan</span>
-              </h2>
+              <h1 class="text-unggu text-5xl sm:text-6xl lg:text-9xl dark:text-biru font-semibold"
+                style="text-shadow: 2px 3px 2px rgb(192, 185, 192)">
+                Satset tanpa repot!
+              </h1>
               <p
-                class="text-slate-500 mt-5 leading-relaxed font-medium  lg:text-xl lg:text-slate-500 lg:mt-6  dark:text-white">
-                Seorang frontend developer yang merajut inspirasi menjadi karya, menciptakan <br class="hidden lg:flex">
-                website yang bukan sekadar tumpukan kode, melainkan sebuah masterpiece <br class="hidden lg:flex">
-                digital yang memukau dan menginspirasi.
+                class="text-reguler mt-5 leading-relaxed font-medium  lg:text-3xl lg:text-slate-500 lg:mt-16  dark:text-white">
+                Bantu kamu mengirit kocek untuk mendapatkan akun premium <br> terbaik dengan cepat! Nunggu apa lagi?
               </p>
               <div class="flex items-start space-x-3 lg:absolute">
-                <button class="font-semibold text-white bg-[#FDB3CA] [#ef93af]  rounded-full shadow-lg py-2 px-5 my-10 block hover:bg-[#f5a9c0]
-               active:bg-[#ef93af] focus:ring focus:ring-[#f5d0db] ring-1 ring-slate-900/5 space-y-4 transition duration-300 ease-in-out
-               lg:text-lg dark:bg-biru dark:hover:bg-[#6db7fd] dark:active:bg-[#65a9e9] dark:focus:ring-white ">
-                  Yuk kenal lebih dekat <br class="hidden lg:flex">
+                <button class="font-semibold text-white bg-unggu  rounded-full shadow-lg py-3 px-10 my-10 block hover:bg-violet-500 mt-10
+               active:bg-violet-600 focus:ring focus:ring-violet-300 ring-1 ring-slate-900/5 space-y-4 transition duration-300 ease-in-out
+               lg:text-xl ">
+                  Beli Sekarang! <br class="hidden lg:flex">
                 </button>
               </div>
             </div>
           </div>
-          <div class="w-full self-end px-4 lg:w-1/2 mx-auto">
-            <div class="mt-10 ">
-              <img src="public/assets/header.webp" alt="cover" class="max-w-full mx-auto dark:hidden">
+          <div class="w-full self-end px-4 lg:w-1/2 mx-auto ">
+            <div class="">
+              <img src="public/assets/header2.webp" alt="cover" class="max-w-full mx-auto w-full ">
             </div>
           </div>
         </div>
       </div>
   </section>
-   </section>
-   <!-- header end -->
+  <!-- header end -->
 </body>
+<script src="src/css/js/script.js"></script>
+
 </html>

@@ -9,17 +9,13 @@ module.exports = {
 
     extend: {
       colors: {
-        textKu: '#C26582',
-        dark: '#1e293b',
-        semibold: '#334155',
-        dasar: '#64748b',
-        pink: '#FFEFF5',
-        biru: '#3E9EF7',
-        semiPink: '#f9ccdd',
-        birumuda: '#DEEFFF',
+        unggu: '#9F70FD',
+        basic: '#64748b',
+        reguler: '#334155',
+        bold: '#1e293b',
       },
       screens: {
-        '2xl': '1520px'
+        '2xl': '1820px'
       }
     },
   },
