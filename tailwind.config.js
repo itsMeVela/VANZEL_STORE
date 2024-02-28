@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       colors: {
         unggu: '#9F70FD',
+        hijau: '#198754',
         basic: '#64748b',
         reguler: '#475569',
         bold: '#1e293b',
