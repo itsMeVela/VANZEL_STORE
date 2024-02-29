@@ -35,3 +35,11 @@ function openModalSpotify() {
 function closeModalSpotify() {
     document.getElementById('spotify-modal').style.display = 'none';
 }
+
+function openModalViu() {
+    document.getElementById('viu-modal').style.display = 'block';
+}
+
+function closeModalViu() {
+    document.getElementById('viu-modal').style.display = 'none';
+}
