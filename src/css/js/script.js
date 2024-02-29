@@ -51,3 +51,19 @@ function openModalYoutube() {
 function closeModalYoutube() {
     document.getElementById('youtube-modal').style.display = 'none';
 }
+
+function openModalZoom() {
+    document.getElementById('zoom-modal').style.display = 'block';
+}
+
+function closeModalZoom() {
+    document.getElementById('zoom-modal').style.display = 'none';
+}
+
+function openModalCanva() {
+    document.getElementById('canva-modal').style.display = 'block';
+}
+
+function closeModalCanva() {
+    document.getElementById('canva-modal').style.display = 'none';
+}
