@@ -43,3 +43,11 @@ function openModalViu() {
 function closeModalViu() {
     document.getElementById('viu-modal').style.display = 'none';
 }
+
+function openModalYoutube() {
+    document.getElementById('youtube-modal').style.display = 'block';
+}
+
+function closeModalYoutube() {
+    document.getElementById('youtube-modal').style.display = 'none';
+}
