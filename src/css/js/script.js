@@ -27,3 +27,11 @@ window.addEventListener('click', function (e) {
         navMenu.classList.add('hidden');
     }
 })
+
+function openModalSpotify() {
+    document.getElementById('spotify-modal').style.display = 'block';
+}
+
+function closeModalSpotify() {
+    document.getElementById('spotify-modal').style.display = 'none';
+}

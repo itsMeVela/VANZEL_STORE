@@ -229,7 +229,7 @@
             <h3 class="font-bold text-4xl mb-8 text-bold">Spotify Premium</h3>
             <h1 class="font-bold text-2xl text-blue-600 mb-5">Rp. 25.000</h1>
             <div
-              class=" bg-[#C084FC] rounded-lg max-w-full flex items-center justify-center hover:bg-[#B264FF] active:bg-[#A750FF]">
+              class=" bg-[#C084FC] rounded-lg max-w-full flex items-center justify-center hover:bg-[#B264FF] active:bg-[#A750FF]" onclick="openModalSpotify()">
               <button type="button" class="font-bold text-white text-xl py-3">
                 BUY NOW
               </button>
@@ -533,31 +533,10 @@
   <!-- back to top end -->
 
   <!-- modal spotufy start -->
-  <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-    <!--
-      Background backdrop, show/hide based on modal state.
-  
-      Entering: "ease-out duration-300"
-        From: "opacity-0"
-        To: "opacity-100"
-      Leaving: "ease-in duration-200"
-        From: "opacity-100"
-        To: "opacity-0"
-    -->
+  <div class="relative z-10 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true" id="spotify-modal">
     <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
-
     <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
       <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 ">
-        <!--
-          Modal panel, show/hide based on modal state.
-  
-          Entering: "ease-out duration-300"
-            From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            To: "opacity-100 translate-y-0 sm:scale-100"
-          Leaving: "ease-in duration-200"
-            From: "opacity-100 translate-y-0 sm:scale-100"
-            To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-        -->
         <div
           class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl ">
           <div class="bg-white px-4 pb-40 pt-5 sm:p-6 sm:pb-4">
