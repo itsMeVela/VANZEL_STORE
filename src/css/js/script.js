@@ -75,3 +75,11 @@ function openModalVpn() {
 function closeModalVpn() {
     document.getElementById('vpn-modal').style.display = 'none';
 }
+
+function openModalNetflix() {
+    document.getElementById('netflix-modal').style.display = 'block';
+}
+
+function closeModalNetflix() {
+    document.getElementById('netflix-modal').style.display = 'none';
+}
