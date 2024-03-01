@@ -68,13 +68,6 @@ function closeModalCanva() {
     document.getElementById('canva-modal').style.display = 'none';
 }
 
-function openModalVpn() {
-    document.getElementById('vpn-modal').style.display = 'block';
-}
-
-function closeModalVpn() {
-    document.getElementById('vpn-modal').style.display = 'none';
-}
 
 function openModalNetflix() {
     document.getElementById('netflix-modal').style.display = 'block';
