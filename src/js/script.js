@@ -189,3 +189,8 @@ function updateQuantity6() {
     document.getElementById('total6').textContent = 'Rp. ' + (priceNetflix * quantityNetflix).toLocaleString('id-ID');
 }
 
+
+function toggleModalCart() {
+    var tetapElement = document.getElementById("tetap");
+    tetapElement.classList.toggle("tetap1");
+}

@@ -10,6 +10,9 @@
   @apply bg-white bg-opacity-70 backdrop-blur-sm;
   box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
 }
+.garis {
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+}
 
 .hamburger-active > span:nth-child(1) {
   @apply rotate-45;
@@ -134,4 +137,16 @@
   font-family: "Poppins", sans-serif;
   font-weight: 900;
   font-style: italic;
+}
+
+#tetap {
+  transition: top 0.3s ease; /* Animasi perpindahan */
+}
+
+.tetap1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Sesuaikan dengan kebutuhan, pastikan z-index lebih tinggi dari elemen-elemen lainnya */
 }
