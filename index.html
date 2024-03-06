@@ -60,8 +60,10 @@
   </header>
   <!-- navbar end -->
 
+
   <!-- header start -->
-  <section id="beranda" class="py-10 lg:h-screen container mx-auto dark:bg-gradient-to-tl dark:from-slate-900 relative overflow-hidden">
+  <section id="beranda"
+    class="py-10 lg:h-screen container mx-auto dark:bg-gradient-to-tl dark:from-slate-900 relative overflow-hidden">
     <div class="my-10 px-5 md:flex md:pb-[35%] lg:mt-[15%]">
       <div class="flex flex-col md:absolute md:z-[99] ">
         <h1 class="text-4xl md:text-3xl font-bold lg:text-6xl">
@@ -88,6 +90,29 @@
     </div>
   </section>
   <!-- header end -->
+
+  <button onclick="toggleModalCart('Product A', 'Rp. 100.000')"
+    class="fixed bottom-5 right-5 z-50 bg-[#25D366] text-white rounded-full p-3 shadow-lg">
+    halo
+  </button>
+
+  <div id="modal" class="modal fixed w-full h-full top-0 left-0 items-center justify-center hidden">
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-40"></div>
+
+    <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-[999] overflow-y-auto">
+
+      <div class="modal-content py-4 text-left px-6">
+        <div class="modal-header flex justify-between items-center pb-3">
+          <h2 class="text-2xl font-bold">Product Details</h2>
+          <span class="close-btn cursor-pointer z-50" onclick="toggleModalCart()">&times;</span>
+        </div>
+
+        <div class="modal-body">
+          <div id="modalContent"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- produk unggulan start -->
   <section id="aboute" style="background-image: url(./public/assets/bg1.webp);" class="bg-contain">
@@ -182,7 +207,7 @@
   <!-- produk unggulan end -->
 
   <!-- produk shope start -->
-  <section id="produk" style="background-image: url(./public/assets/bg2.webp);" class="bg-contain md:px10">
+  <section id="produk" style="background-image: url(./public/assets/bg2.webp);" class="bg-cover lg:bg-contain">
     <div class="container mx-auto px-5">
       <div class="py-5 md:py-10">
         <h1 class="text-center mt-5 text-xl font-extrabold text-slate-800 lg:text-4xl">
@@ -204,7 +229,7 @@
             <div class="rounded-lg shadow-2xl bg-white  ring-1 ring-slate-900/5 w-full px-3 py-3 lg:p-5">
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-1">
-                  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8">
+                  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
@@ -264,7 +289,7 @@
             <div class="rounded-lg shadow-2xl bg-white  ring-1 ring-slate-900/5 w-full px-3 py-3 lg:p-5">
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-1">
-                  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8">
+                  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
@@ -319,7 +344,7 @@
             <div class="rounded-lg shadow-2xl bg-white  ring-1 ring-slate-900/5 w-full px-3 py-3 lg:p-5">
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-1">
-                  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8">
+                  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
@@ -373,7 +398,7 @@
             <div class="rounded-lg shadow-2xl bg-white  ring-1 ring-slate-900/5 w-full px-3 py-3 lg:p-5">
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-1">
-                  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8">
+                  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
@@ -426,7 +451,7 @@
             <div class="rounded-lg shadow-2xl bg-white  ring-1 ring-slate-900/5 w-full px-3 py-3 lg:p-5">
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-1">
-                  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8">
+                  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
@@ -486,7 +511,7 @@
             <div class="rounded-lg shadow-2xl bg-white  ring-1 ring-slate-900/5 w-full px-3 py-3 lg:p-5">
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-1">
-                  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8">
+                  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
@@ -544,7 +569,7 @@
             <div class="rounded-lg shadow-2xl bg-white  ring-1 ring-slate-900/5 w-full px-3 py-3 lg:p-5">
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-1">
-                  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8">
+                  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 lg:w-8">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
@@ -604,7 +629,7 @@
             <div class="rounded-lg shadow-2xl bg-white  ring-1 ring-slate-900/5 w-full px-3 py-3 lg:p-5">
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-1">
-                  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8">
+                  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 lg:w-8">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
@@ -658,7 +683,7 @@
             <div class="rounded-lg shadow-2xl bg-white  ring-1 ring-slate-900/5 w-full px-3 py-3 lg:p-5">
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-1">
-                  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8">
+                  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 lg:w-8">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
@@ -713,7 +738,7 @@
             <div class="rounded-lg shadow-2xl bg-white  ring-1 ring-slate-900/5 w-full px-3 py-3 lg:p-5">
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-1">
-                  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8">
+                  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 lg:w-8">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
@@ -767,7 +792,7 @@
             <div class="rounded-lg shadow-2xl bg-white  ring-1 ring-slate-900/5 w-full px-3 py-3 lg:p-5">
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-1">
-                  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8">
+                  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 lg:w-8">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
@@ -827,7 +852,7 @@
             <div class="rounded-lg shadow-2xl bg-white  ring-1 ring-slate-900/5 w-full px-3 py-3 lg:p-5">
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-1">
-                  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8">
+                  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 lg:w-8">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
@@ -891,7 +916,8 @@
         <div
           class="rounded-lg shadow-2xl flex flex-col w-full lg:pb-10 justify-center items-center bg-white backdrop-blur-xs bg-white/70 ring-2 ring-slate-900/5 p-5">
           <div class="flex flex-col gap-2">
-            <div class="font-bold text-lg lg:text-3xl lg:my-5 text-center text-slate-700">Ada Pertanyaan ? Yuk Hubungi Kami</div>
+            <div class="font-bold text-lg lg:text-3xl lg:my-5 text-center text-slate-700">Ada Pertanyaan ? Yuk Hubungi
+              Kami</div>
             <form action="#" method="POST" class="w-full">
               <label for="name" class="text-sm lg:text-xl text-gray-600">Nama</label>
               <input type="text" id="name" name="name" placeholder="Masukkan nama Anda"
@@ -920,12 +946,55 @@
         <div class="flex flex-col gap-2 w-full">
           <h1 class="text-white text-[9px] md:hidden text-center">© 2024 Copyright VANZEL STORE | All reservered by <a
               href="https://www.instagram.com/digifast_id/" class="font-bold">DigitalFast.id</a></h1>
-          <h1 class="text-white text-lg md:block text-center">© 2024 Copyright VANZEL STORE | All reservered by <a
-              href="https://www.instagram.com/digifast_id/" class="font-bold">DigitalFast.id</a></h1>
+          <h1 class="hidden lg:block text-white text-lg md:block text-center">© 2024 Copyright VANZEL STORE | All
+            reservered by <a href="https://www.instagram.com/digifast_id/" class="font-bold">DigitalFast.id</a></h1>
         </div>
       </div>
   </footer>
   <!-- footer end -->
+
+  <!-- script strt -->
+  <script>
+    function toggleModalCart(nameOfProduct, price) {
+      var modal = document.getElementById('modal');
+      var modalContent = modal.querySelector('.modal-content');
+
+       if (modal.style.display === 'none' || modal.style.display === '') {
+        // Show modal and update content
+        modal.classList.remove('hidden');
+        modalContent.innerHTML = `
+          <h3 class="text-lg font-bold">${nameOfProduct}</h3>
+          <p class="mt-2">Price: ${price}</p>
+        `;
+      } else {
+        // Hide modal
+        modal.classList.add('hidden');
+        modalContent.innerHTML = ''; // Reset modal content
+      }
+    }
+    function WhatsAppNotification(name, email, phone, orderID, date, status, total) {
+      var phone = "+6289507318790";
+      var message = `🛍 PURCHASE NOTIFICATION
+  ========================
+  
+  Hello Admin,
+  There is a new buyer.
+  
+  👤 Buyer Data:
+  Name: ${name}
+  Email: ${email}
+  Phone: ${phone}
+  
+  📦 Order Detail:
+  Order ID: ${orderID}
+  Date: ${date}
+  Status: ${status}
+  Total: Rp. ${total}`;
+      var url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+  <!-- script end -->
 
 </body>
 <script src="src/css/js/script.js"></script>
