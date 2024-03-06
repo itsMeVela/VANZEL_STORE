@@ -15,7 +15,7 @@
 <body class="bg-[#F5F3F4] poppins-medium">
 
   <!-- navbar satrt -->
-  <header class="bg-white bg-opacity-70 backdrop-blur-sm fixed top-0 inset-x-0 w-full flex items-center z-[9999] navbar-fixed">
+  <header class=" fixed top-0 inset-x-0 w-full flex items-center z-[99]">
     <div class="container mx-auto">
       <div class="flex items-center justify-between relative">
         <div class="px-5">
@@ -65,7 +65,7 @@
   <section id="beranda"
     class="py-10 lg:h-screen container mx-auto dark:bg-gradient-to-tl dark:from-slate-900 relative overflow-hidden">
     <div class="my-10 px-5 md:flex md:pb-[35%] lg:mt-[15%]">
-      <div class="flex flex-col md:absolute md:z-[99] ">
+      <div class="flex flex-col md:absolute md:z-[20] ">
         <h1 class="text-4xl md:text-3xl font-bold lg:text-6xl">
           Cari yang Premium <br>
         </h1>
@@ -96,25 +96,7 @@
     halo
   </button>
 
-  <div id="modal" class="modal fixed w-full h-full top-0 left-0 items-center justify-center hidden">
-    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
-    <div class="fixed inset-0 z-[9999] w-screen overflow-y-auto">
-      <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-[999] overflow-y-auto">
 
-        <div class="modal-content py-4 text-left px-6">
-          <div class="modal-header flex justify-between items-center pb-3">
-            <h2 class="text-2xl font-bold">Product Details</h2>
-            <span class="close-btn cursor-pointer z-50" onclick="toggleModalCart()">&times;</span>
-          </div>
-
-          <div class="modal-body">
-            <div id="modalContent"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
 
   <!-- produk unggulan start -->
   <section id="aboute" style="background-image: url(./public/assets/bg1.webp);" class="bg-contain">
@@ -957,6 +939,18 @@
 
   <!-- script strt -->
   <script>
+    window.onscroll = function () {
+      const header = document.querySelector('header');
+      const fixedNav = header.offsetTop;
+
+      if (window.pageYOffset > fixedNav) {
+        header.classList.add('navbar-fixed');
+      } else {
+        header.classList.remove('navbar-fixed');
+      }
+    };
+
+
     function toggleModalCart(nameOfProduct, price) {
       var modal = document.getElementById('modal');
       var modalContent = modal.querySelector('.modal-content');
@@ -964,10 +958,6 @@
       if (modal.style.display === 'none' || modal.style.display === '') {
         // Show modal and update content
         modal.classList.remove('hidden');
-        modalContent.innerHTML = `
-          <h3 class="text-lg font-bold">${nameOfProduct}</h3>
-          <p class="mt-2">Price: ${price}</p>
-        `;
       } else {
         // Hide modal
         modal.classList.add('hidden');
@@ -998,7 +988,54 @@
   </script>
   <!-- script end -->
 
+
+  <div id="modal" class="modal fixed w-full h-full top-0 left-0 items-center justify-center z-[999]">
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+    <div class="fixed inset-0 w-screen overflow-y-auto">
+      <div class="modal-container bg-white md:max-w-md mx-auto rounded shadow-lg overflow-y-auto w-full ">
+        <div class="modal-content py-4 text-left">
+          <div class="modal-header flex justify-between items-center px-5">
+            <h2 class="text-xl font-bold ">Product Details</h2>
+            <button onclick="toggleModalCart()">✖️</button>
+          </div>
+          <div class="w-full border mt-2"></div>
+          <div class="modal-body px-5">
+            <div class="mt-2">
+              <div class="border py-4 px-5 border-gray-500 rounded-lg">
+                <div class="flex gap-2">
+                  <h1 class="">1. Pilih Paket Product</h1>
+                </div>
+                <div class="flex items-center gap-2 mt-2">
+                  <label for="product" class="text-xs">Garansi</label>
+                  <input type="checkbox" name="product" id="product" class="form-checkbox" label="product">
+                </div>
+                <div class="flex mt-2 w-full gap-2">
+                  <button class="border p-2 px-3 flex border-gray-500 rounded-lg w-full items-center gap-3 active:bg-violet-100">
+                    <lord-icon src="https://cdn.lordicon.com/evyuuwna.json" trigger="hover">
+                    </lord-icon>
+                    <div class="flex flex-col items-start">
+                      <h1 class="text-md">Bergaransi</h1>
+                      <h1 class="text-xs">1 Bulan</h1>
+                    </div>
+                  </button>
+                  <button class="border p-2 px-3 flex border-gray-500 rounded-lg w-full items-center gap-3">
+                    <lord-icon src="https://cdn.lordicon.com/evyuuwna.json" trigger="hover">
+                    </lord-icon>
+                    <div class="flex flex-col items-start">
+                      <h1 class="text-md">Bergaransi</h1>
+                      <h1 class="text-xs">1 Bulan</h1>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 <script src="src/css/js/script.js"></script>
+<script src="https://cdn.lordicon.com/lordicon.js"></script>
 
 </html>
