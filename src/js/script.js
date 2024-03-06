@@ -77,7 +77,7 @@ function closeModalNetflix() {
     document.getElementById('netflix-modal').style.display = 'none';
 }
 
-
+let nameProduct = 'Spotify Premium';
 let priceSpotify = 25000; // Harga per item
 let quantitySpotify = 1; // Jumlah awal
 
