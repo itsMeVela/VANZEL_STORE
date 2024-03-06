@@ -15,7 +15,7 @@
 <body class="bg-[#F5F3F4] poppins-medium">
 
   <!-- navbar satrt -->
-  <header class="bg-transparent absolute  top-0 left-0  w-full flex items-center z-10">
+  <header class="bg-white bg-opacity-70 backdrop-blur-sm fixed top-0 inset-x-0 w-full flex items-center z-[9999]">
     <div class="container mx-auto">
       <div class="flex items-center justify-between relative">
         <div class="px-5">
@@ -97,21 +97,23 @@
   </button>
 
   <div id="modal" class="modal fixed w-full h-full top-0 left-0 items-center justify-center hidden">
-    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-40"></div>
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+    <div class="fixed inset-0 z-[9999] w-screen overflow-y-auto">
+      <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-[999] overflow-y-auto">
 
-    <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-[999] overflow-y-auto">
+        <div class="modal-content py-4 text-left px-6">
+          <div class="modal-header flex justify-between items-center pb-3">
+            <h2 class="text-2xl font-bold">Product Details</h2>
+            <span class="close-btn cursor-pointer z-50" onclick="toggleModalCart()">&times;</span>
+          </div>
 
-      <div class="modal-content py-4 text-left px-6">
-        <div class="modal-header flex justify-between items-center pb-3">
-          <h2 class="text-2xl font-bold">Product Details</h2>
-          <span class="close-btn cursor-pointer z-50" onclick="toggleModalCart()">&times;</span>
-        </div>
-
-        <div class="modal-body">
-          <div id="modalContent"></div>
+          <div class="modal-body">
+            <div id="modalContent"></div>
+          </div>
         </div>
       </div>
     </div>
+
   </div>
 
   <!-- produk unggulan start -->
@@ -959,7 +961,7 @@
       var modal = document.getElementById('modal');
       var modalContent = modal.querySelector('.modal-content');
 
-       if (modal.style.display === 'none' || modal.style.display === '') {
+      if (modal.style.display === 'none' || modal.style.display === '') {
         // Show modal and update content
         modal.classList.remove('hidden');
         modalContent.innerHTML = `
