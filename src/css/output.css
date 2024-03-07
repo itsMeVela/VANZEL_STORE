@@ -945,6 +945,10 @@ video {
   width: 100%;
 }
 
+.w-1 {
+  width: 0.25rem;
+}
+
 .max-w-\[250px\] {
   max-width: 250px;
 }
@@ -1293,6 +1297,10 @@ video {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -2033,6 +2041,11 @@ video {
 .bg-gray-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
 .bg-violet-600 {
@@ -3043,20 +3056,6 @@ video {
   font-style: italic;
 }
 
-#tetap {
-  transition: top 0.3s ease;
-  /* Animasi perpindahan */
-}
-
-.tetap1 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  /* Sesuaikan dengan kebutuhan, pastikan z-index lebih tinggi dari elemen-elemen lainnya */
-}
-
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -3442,3 +3441,4 @@ video {
     }
   }
 }
+
