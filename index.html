@@ -1134,9 +1134,75 @@
   </div>
 </body>
 <script>
-  const paketSpotify = ['individual', 'duo', 'family', 'student'];
-  const defaultPriceSpotify = 0;
-  
+  const paketSpotify = [
+    {
+      name: 'Individual',
+      price: 4000,
+      garansi: '6000',
+      duration: '1 Bulan',
+    },
+    {
+      name: 'Individual',
+      price: 6000,
+      garansi: '8000',
+      duration: '2 Bulan',
+    },
+    {
+      name: 'Individual',
+      price: 8000,
+      garansi: '10000',
+      duration: '3 Bulan',
+    },
+  ];
+
+  const paketYoutube = [
+    {
+      name: 'Individual',
+      price: 13000,
+      garansi: '20000',
+      duration: '4 Bulan',
+    },
+  ];
+
+  const paketZoom = [
+    {
+      name: 'Individual',
+      price: 10000,
+      garansi: '15000',
+      duration: '1 Bulan',
+    },
+  ];
+
+  const paketCanva = [
+    {
+      name: 'Individual',
+      price: 5000,
+      duration: '30 Hari',
+    },
+    {
+      name: 'Individual',
+      price: 7000,
+      duration: '45 Hari',
+    },
+  ];
+
+  const paketNetflix = [
+    {
+      name: 'Individual',
+      price: 28000,
+      duration: '1 Bulan',
+    },
+  ];
+
+  const paketViu = [
+    {
+      name: 'Individual',
+      price: 5000,
+      garansi: 7000,
+      duration: '1 Bulan',
+    },
+  ];
+
   //open modal
   function openModalCheckout() {
     var modal = document.getElementById('modal');
