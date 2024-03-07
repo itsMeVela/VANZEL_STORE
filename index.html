@@ -1040,8 +1040,14 @@
 
     // close
     function toggleModalCart() {
-        const modal = document.getElementById('spotyfy1');
-        modal.classList.toggle('hidden');
+      const modal = document.getElementById('spotyfy1');
+      modal.classList.toggle('hidden');
+    }
+    //tampil
+    function openModalSpotify() {
+      const modalSpotify = document.getElementById('spotyfy1');
+      modalSpotify.classList.remove('hidden');
+      
     }
 
     // function toggleModalCart(nameOfProduct, price) {
@@ -1082,7 +1088,7 @@
   <!-- script end -->
 
 
-  <div id="spotyfy1" class="modal fixed w-full h-full top-0 left-0 items-center justify-center z-[999] ">
+  <div id="spotyfy1" class="modal fixed w-full h-full top-0 left-0 items-center justify-center z-[999] hidden">
     <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity flex"></div>
     <div class="fixed inset-0 overflow-y-auto md:top-16 lg:top-10">
       <div class="modal-container bg-white md:max-w-md mx-auto rounded-lg shadow-lg overflow-y-auto w-full relative ">
@@ -1140,7 +1146,8 @@
                 <div class="flex gap-2">
                   <h1 class="text-lg">2. Pilih Jumlah Product</h1>
                 </div>
-                <div class="w-full my-2 border flex border-gray-500 rounded-lg items-center justify-between  bg-red-500 grid-cols-4">
+                <div
+                  class="w-full my-2 border flex border-gray-500 rounded-lg items-center justify-between  bg-red-500 grid-cols-4">
                   <button
                     class=" border-r-2 border-gray-400  py-2 px-3  active:bg-slate-400 hover:bg-slate-400 hover:text-white font-semibold"
                     onclick="decreaseQuantity()">-</button>
