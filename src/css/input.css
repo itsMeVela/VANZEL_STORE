@@ -139,14 +139,3 @@
   font-style: italic;
 }
 
-#tetap {
-  transition: top 0.3s ease; /* Animasi perpindahan */
-}
-
-.tetap1 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* Sesuaikan dengan kebutuhan, pastikan z-index lebih tinggi dari elemen-elemen lainnya */
-}

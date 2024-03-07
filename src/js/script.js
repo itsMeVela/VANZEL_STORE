@@ -190,7 +190,3 @@ function updateQuantity6() {
 }
 
 
-function toggleModalCart() {
-    var tetapElement = document.getElementById("tetap");
-    tetapElement.classList.toggle("tetap1");
-}
