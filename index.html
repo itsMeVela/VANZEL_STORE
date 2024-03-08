@@ -60,10 +60,9 @@
   </header>
   <!-- navbar end -->
 
-
   <!-- header start -->
   <section id="beranda"
-    class="py-10 lg:h-screen container mx-auto dark:bg-gradient-to-tl dark:from-slate-900 relative overflow-hidden">
+    class="py-10 container mx-auto dark:bg-gradient-to-tl dark:from-slate-900 relative overflow-hidden">
     <div class="my-10 px-5 md:flex md:pb-[35%] lg:mt-[15%]">
       <div class="flex flex-col md:absolute md:z-[20] ">
         <h1 class="text-4xl md:text-3xl font-bold lg:text-6xl">
@@ -90,13 +89,6 @@
     </div>
   </section>
   <!-- header end -->
-
-  <button onclick="toggleModalCart('Product A', 'Rp. 100.000')"
-    class="fixed bottom-5 right-5 z-50 bg-[#25D366] text-white rounded-full p-3 shadow-lg">
-    halo
-  </button>
-
-
 
   <!-- produk unggulan start -->
   <section id="aboute" style="background-image: url(./public/assets/bg1.webp);" class="bg-contain">
@@ -191,10 +183,10 @@
   <!-- produk unggulan end -->
 
   <!-- produk shope start -->
-  <section id="produk" style="background-image: url(./public/assets/bg2.webp);" class="bg-cover lg:bg-contain">
+  <section id="produk" style="background-image: url(./public/assets/bg2.webp);" class="bg-cover lg:bg-contain lg:py-20">
     <div class="container mx-auto px-5">
       <div class="py-5 md:py-10">
-        <h1 class="text-center mt-5 text-xl font-extrabold text-slate-800 lg:text-4xl">
+        <h1 class="text-center mt-5text-xl font-extrabold text-slate-800 lg:text-4xl">
           DISKON MENARIK MENANTI
         </h1>
         <h1 class="text-center mt-1 md:text-md text-[10px] text-slate-800 lg:hidden">
@@ -237,7 +229,7 @@
                 <img src="public/assets/spotify.webp" alt="" class="w-[50%] p-2">
               </div>
               <div class="flex flex-col gap-1">
-                <h3 class="font-bold text-sm text-bold lg:text-2xl">Spotify Premium</h3>
+                <h3 class="font-bold text-xs text-bold lg:text-2xl">Spotify Premium</h3>
                 <div class="flex gap-2">
                   <h1
                     class="lg:hidden font-medium text-[#0cc44f] text-[8px] text-basic bg-[#8FEBB0] px-2 py-[1px] flex justify-center items-center rounded-full">
@@ -253,16 +245,17 @@
                     Hiburan</h1>
                 </div>
                 <div class="flex gap-2 items-center">
-                  <h1 class="font-bold text-sm text-red-600 text-bold lg:text-2xl"><s>Rp. 15.000</s></h1>
-                  <h1 class="font-bold text-sm text-bold lg:text-2xl">Rp. 4.000</h1>
+                  <h1 class="font-bold text-xs text-red-600 text-bold lg:text-2xl"><s>Rp. 15.000</s></h1>
+                  <h1 class="font-bold text-xs text-bold lg:text-2xl">Rp. 4.000</h1>
                 </div>
                 <div
                   class=" bg-[#C084FC] rounded-lg flex items-center justify-center hover:bg-[#B264FF] active:bg-[#A750FF]"
-                  onclick="openModalSpotify()">
+                  onclick="openModalCheckout('spotify')">
                   <button type="button" class="lg:hidden font-bold text-white text-[9px] py-1" id="btnSpotify">
                     BUY NOW
                   </button>
-                  <button type="button" class="hidden lg:block font-bold text-white text-xl py-1" id="btnSpotify">
+                  <button type="button" class="hidden lg:block font-bold text-white text-xl py-1" id="btnSpotify"
+                    onclick="openModalCheckout('spotify')">
                     BUY NOW
                   </button>
                 </div>
@@ -297,7 +290,7 @@
                 <img src="public/assets/viu.webp" alt="" class="w-[50%] p-2">
               </div>
               <div class="flex flex-col gap-1">
-                <h3 class="font-bold text-sm text-bold lg:text-2xl">Viu Premium</h3>
+                <h3 class="font-bold text-xs text-bold lg:text-2xl">Viu Premium</h3>
                 <div class="flex gap-2">
                   <h1
                     class="lg:hidden font-medium text-[#a78216] text-[8px] text-basic bg-[#FFDF82] px-2 flex justify-center items-center rounded-full">
@@ -307,16 +300,18 @@
                     Hiburan</h1>
                 </div>
                 <div class="flex gap-3 items-center">
-                  <h1 class="font-bold text-sm text-red-600 text-bold lg:text-2xl"><s>Rp. 15.000</s></h1>
-                  <h1 class="font-bold text-sm text-bold lg:text-2xl">Rp. 5.000</h1>
+                  <h1 class="font-bold text-xs text-red-600 text-bold lg:text-2xl"><s>Rp. 15.000</s></h1>
+                  <h1 class="font-bold text-xs text-bold lg:text-2xl">Rp. 5.000</h1>
                 </div>
                 <div
                   class=" bg-[#C084FC] rounded-lg flex items-center justify-center hover:bg-[#B264FF] active:bg-[#A750FF]"
-                  onclick="openModalViu()">
-                  <button type="button" class="lg:hidden font-bold text-white text-[9px] py-1" id="btnViu">
+                  onclick="openModalCheckout('viu')">
+                  <button type="button" class="lg:hidden font-bold text-white text-[9px] py-1" id="btnViu"
+                    onclick="openModalCheckout('viu')">
                     BUY NOW
                   </button>
-                  <button type="button" class="hidden lg:block font-bold text-white text-xl py-1" id="btnViu">
+                  <button type="button" class="hidden lg:block font-bold text-white text-xl py-1" id="btnViu"
+                    onclick="openModalCheckout('viu')">
                     BUY NOW
                   </button>
                 </div>
@@ -352,7 +347,7 @@
                 <img src="public/assets/yt.webp" alt="" class="w-[50%] p-2">
               </div>
               <div class="flex flex-col gap-1">
-                <h3 class="font-bold text-sm text-bold lg:text-2xl">Youtube Premium</h3>
+                <h3 class="font-bold text-xs text-bold lg:text-2xl">Youtube Premium</h3>
                 <div class="flex gap-2">
                   <h1
                     class="lg:hidden font-medium text-[#a78216] text-[8px] text-basic bg-[#FFDF82] px-2 flex justify-center items-center rounded-full">
@@ -362,16 +357,17 @@
                     Hiburan</h1>
                 </div>
                 <div class="flex gap-3 items-center">
-                  <h1 class="font-bold text-sm text-red-600 text-bold lg:text-2xl"><s>Rp. 35.000</s></h1>
-                  <h1 class="font-bold text-sm text-bold lg:text-2xl">Rp. 13.000</h1>
+                  <h1 class="font-bold text-xs text-red-600 text-bold lg:text-2xl"><s>Rp. 35.000</s></h1>
+                  <h1 class="font-bold text-xs text-bold lg:text-2xl">Rp. 13.000</h1>
                 </div>
                 <div
                   class=" bg-[#C084FC] rounded-lg flex items-center justify-center hover:bg-[#B264FF] active:bg-[#A750FF]"
-                  onclick="openModalYoutube()">
+                  onclick="openModalCheckout('youtube')">
                   <button type="button" class="lg:hidden font-bold text-white text-[9px] py-1" id="btnYoutube">
                     BUY NOW
                   </button>
-                  <button type="button" class="hidden lg:block font-bold text-white text-xl py-1" id="btnYoutube">
+                  <button type="button" class="hidden lg:block font-bold text-white text-xl py-1" id="btnYoutube"
+                    onclick="openModalCheckout('youtube')">
                     BUY NOW
                   </button>
                 </div>
@@ -406,23 +402,24 @@
                 <img src="public/assets/Zoom.webp" alt="" class="w-[50%] p-2">
               </div>
               <div class="flex flex-col gap-1">
-                <h3 class="font-bold text-sm text-bold lg:text-2xl">Zoom Premium</h3>
+                <h3 class="font-bold text-xs text-bold lg:text-2xl">Zoom Premium</h3>
                 <div class="flex gap-2">
                   <h1
                     class="font-medium text-[#388090] text-[8px] text-basic bg-[#82e8ff] px-2 flex justify-center items-center rounded-full">
                     Online Meeting</h1>
                 </div>
                 <div class="flex gap-3 items-center">
-                  <h1 class="font-bold text-sm text-red-600 text-bold lg:text-2xl"><s>Rp. 25.000</s></h1>
-                  <h1 class="font-bold text-sm text-bold lg:text-2xl">Rp. 10.000</h1>
+                  <h1 class="font-bold text-xs text-red-600 text-bold lg:text-2xl"><s>Rp. 25.000</s></h1>
+                  <h1 class="font-bold text-xs text-bold lg:text-2xl">Rp. 10.000</h1>
                 </div>
                 <div
                   class=" bg-[#C084FC] rounded-lg flex items-center justify-center hover:bg-[#B264FF] active:bg-[#A750FF]"
-                  onclick="openModalViu()">
+                  onclick="openModalCheckout('zoom')">
                   <button type="button" class="lg:hidden font-bold text-white text-[9px] py-1" id="btnZoom">
                     BUY NOW
                   </button>
-                  <button type="button" class="hidden lg:block font-bold text-white text-xl py-1" id="btnZoom">
+                  <button type="button" class="hidden lg:block font-bold text-white text-xl py-1" id="btnZoom"
+                    onclick="openModalCheckout('zoom')">
                     BUY NOW
                   </button>
                 </div>
@@ -459,7 +456,7 @@
                 <img src="public/assets/canva.webp" alt="" class="w-[50%] p-2">
               </div>
               <div class="flex flex-col gap-1">
-                <h3 class="font-bold text-sm text-bold lg:text-2xl">Canva Premium</h3>
+                <h3 class="font-bold text-xs text-bold lg:text-2xl">Canva Premium</h3>
                 <div class="flex gap-2">
                   <h1
                     class="lg:hidden font-medium text-[#0cc44f] text-[8px] text-basic bg-[#8FEBB0] px-2 py-[1px] flex justify-center items-center rounded-full">
@@ -475,16 +472,17 @@
                     Hiburan</h1>
                 </div>
                 <div class="flex gap-3 items-center">
-                  <h1 class="font-bold text-sm text-red-600 text-bold lg:text-2xl"><s>Rp. 15.000</s></h1>
-                  <h1 class="font-bold text-sm text-bold lg:text-2xl">Rp. 5.000</h1>
+                  <h1 class="font-bold text-xs text-red-600 text-bold lg:text-2xl"><s>Rp. 15.000</s></h1>
+                  <h1 class="font-bold text-xs text-bold lg:text-2xl">Rp. 5.000</h1>
                 </div>
                 <div
                   class=" bg-[#C084FC] rounded-lg flex items-center justify-center hover:bg-[#B264FF] active:bg-[#A750FF]"
-                  onclick="openModalCanva()">
+                  onclick="openModalCheckout('canva')">
                   <button type="button" class="lg:hidden font-bold text-white text-[9px] py-1" id="btnCanva">
                     BUY NOW
                   </button>
-                  <button type="button" class="hidden lg:block font-bold text-white text-xl py-1" id="btnCanva">
+                  <button type="button" class="hidden lg:block font-bold text-white text-xl py-1" id="btnCanva"
+                    onclick="openModalCheckout('canva')">
                     BUY NOW
                   </button>
                 </div>
@@ -519,7 +517,7 @@
                 <img src="public/assets/netflix.webp" alt="" class="w-[50%] p-2">
               </div>
               <div class="flex flex-col gap-1">
-                <h3 class="font-bold text-sm text-bold lg:text-2xl">Netflix Premium</h3>
+                <h3 class="font-bold text-xs text-bold lg:text-2xl">Netflix Premium</h3>
                 <div class="flex gap-2">
                   <h1
                     class="lg:hidden font-medium text-[#a78216] text-[8px] text-basic bg-[#FFDF82] px-2 flex justify-center items-center rounded-full">
@@ -529,16 +527,17 @@
                     Hiburan</h1>
                 </div>
                 <div class="flex gap-3 items-center">
-                  <h1 class="font-bold text-sm text-red-600 text-bold lg:text-2xl"><s>Rp. 35.000</s></h1>
-                  <h1 class="font-bold text-sm text-bold lg:text-2xl">Rp. 28.000</h1>
+                  <h1 class="font-bold text-xs text-red-600 text-bold lg:text-2xl"><s>Rp. 35.000</s></h1>
+                  <h1 class="font-bold text-xs text-bold lg:text-2xl">Rp. 28.000</h1>
                 </div>
                 <div
                   class=" bg-[#C084FC] rounded-lg flex items-center justify-center hover:bg-[#B264FF] active:bg-[#A750FF]"
-                  onclick="openModalNetflix()">
+                  onclick="openModalCheckout('netflix')">
                   <button type="button" class="lg:hidden font-bold text-white text-[9px] py-1" id="btnNetflix">
                     BUY NOW
                   </button>
-                  <button type="button" class="hidden lg:block font-bold text-white text-xl py-1" id="btnNetflix">
+                  <button type="button" class="hidden lg:block font-bold text-white text-xl py-1" id="btnNetflix"
+                    onclick="openModalCheckout('netflix')">
                     BUY NOW
                   </button>
                 </div>
@@ -577,7 +576,7 @@
                 <img src="public/assets/spotify.webp" alt="" class="w-[50%] p-2">
               </div>
               <div class="flex flex-col gap-1">
-                <h3 class="font-bold text-sm text-bold lg:text-2xl">Spotify Premium</h3>
+                <h3 class="font-bold text-xs text-bold lg:text-2xl">Spotify Premium</h3>
                 <div class="flex gap-2">
                   <h1
                     class="lg:hidden font-medium text-[#0cc44f] text-[8px] text-basic bg-[#8FEBB0] px-2 py-[1px] flex justify-center items-center rounded-full">
@@ -593,12 +592,12 @@
                     Hiburan</h1>
                 </div>
                 <div class="flex gap-2 items-center">
-                  <h1 class="font-bold text-sm text-red-600 text-bold lg:text-2xl"><s>Rp. 15.000</s></h1>
-                  <h1 class="font-bold text-sm text-bold lg:text-2xl">Rp. 4.000</h1>
+                  <h1 class="font-bold text-xs text-red-600 text-bold lg:text-2xl"><s>Rp. 15.000</s></h1>
+                  <h1 class="font-bold text-xs text-bold lg:text-2xl">Rp. 4.000</h1>
                 </div>
                 <div
                   class=" bg-[#C084FC] rounded-lg flex items-center justify-center hover:bg-[#B264FF] active:bg-[#A750FF]"
-                  onclick="openModalSpotify()">
+                  onclick="openModalCheckout('spotify')">
                   <button type="button" class="lg:hidden font-bold text-white text-[9px] py-1">
                     BUY NOW
                   </button>
@@ -637,7 +636,7 @@
                 <img src="public/assets/viu.webp" alt="" class="w-[50%] p-2">
               </div>
               <div class="flex flex-col gap-1">
-                <h3 class="font-bold text-sm text-bold lg:text-2xl">Viu Premium</h3>
+                <h3 class="font-bold text-xs text-bold lg:text-2xl">Viu Premium</h3>
                 <div class="flex gap-2">
                   <h1
                     class="lg:hidden font-medium text-[#a78216] text-[8px] text-basic bg-[#FFDF82] px-2 flex justify-center items-center rounded-full">
@@ -647,12 +646,12 @@
                     Hiburan</h1>
                 </div>
                 <div class="flex gap-3 items-center">
-                  <h1 class="font-bold text-sm text-red-600 text-bold lg:text-2xl"><s>Rp. 15.000</s></h1>
-                  <h1 class="font-bold text-sm text-bold lg:text-2xl">Rp. 5.000</h1>
+                  <h1 class="font-bold text-xs text-red-600 text-bold lg:text-2xl"><s>Rp. 15.000</s></h1>
+                  <h1 class="font-bold text-xs text-bold lg:text-2xl">Rp. 5.000</h1>
                 </div>
                 <div
                   class=" bg-[#C084FC] rounded-lg flex items-center justify-center hover:bg-[#B264FF] active:bg-[#A750FF]"
-                  onclick="openModalViu()">
+                  onclick="openModalCheckout('viu')">
                   <button type="button" class="lg:hidden font-bold text-white text-[9px] py-1">
                     BUY NOW
                   </button>
@@ -691,7 +690,7 @@
                 <img src="public/assets/yt.webp" alt="" class="w-[50%] p-2">
               </div>
               <div class="flex flex-col gap-1">
-                <h3 class="font-bold text-sm text-bold lg:text-2xl">Youtube Premium</h3>
+                <h3 class="font-bold text-xs text-bold lg:text-2xl">Youtube Premium</h3>
                 <div class="flex gap-2">
                   <h1
                     class="lg:hidden font-medium text-[#a78216] text-[8px] text-basic bg-[#FFDF82] px-2 flex justify-center items-center rounded-full">
@@ -701,12 +700,12 @@
                     Hiburan</h1>
                 </div>
                 <div class="flex gap-3 items-center">
-                  <h1 class="font-bold text-sm text-red-600 text-bold lg:text-2xl"><s>Rp. 35.000</s></h1>
-                  <h1 class="font-bold text-sm text-bold lg:text-2xl">Rp. 13.000</h1>
+                  <h1 class="font-bold text-xs text-red-600 text-bold lg:text-2xl"><s>Rp. 35.000</s></h1>
+                  <h1 class="font-bold text-xs text-bold lg:text-2xl">Rp. 13.000</h1>
                 </div>
                 <div
                   class=" bg-[#C084FC] rounded-lg flex items-center justify-center hover:bg-[#B264FF] active:bg-[#A750FF]"
-                  onclick="openModalYoutube()">
+                  onclick="openModalCheckout('youtube')">
                   <button type="button" class="lg:hidden font-bold text-white text-[9px] py-1" id="btnYoutube">
                     BUY NOW
                   </button>
@@ -746,7 +745,7 @@
                 <img src="public/assets/Zoom.webp" alt="" class="w-[50%] p-2">
               </div>
               <div class="flex flex-col gap-1">
-                <h3 class="font-bold text-sm text-bold lg:text-2xl">Zoom Premium</h3>
+                <h3 class="font-bold text-xs text-bold lg:text-2xl">Zoom Premium</h3>
                 <div class="flex gap-2">
                   <h1
                     class="lg:hidden font-medium text-[#388090] text-[8px] text-basic bg-[#82e8ff] px-2 flex justify-center items-center rounded-full">
@@ -756,12 +755,12 @@
                     Online Meeting</h1>
                 </div>
                 <div class="flex gap-3 items-center">
-                  <h1 class="font-bold text-sm text-red-600 text-bold lg:text-2xl"><s>Rp. 25.000</s></h1>
-                  <h1 class="font-bold text-sm text-bold lg:text-2xl">Rp. 10.000</h1>
+                  <h1 class="font-bold text-xs text-red-600 text-bold lg:text-2xl"><s>Rp. 25.000</s></h1>
+                  <h1 class="font-bold text-xs text-bold lg:text-2xl">Rp. 10.000</h1>
                 </div>
                 <div
                   class=" bg-[#C084FC] rounded-lg flex items-center justify-center hover:bg-[#B264FF] active:bg-[#A750FF]"
-                  onclick="openModalViu()">
+                  onclick="openModalCheckout('zoom')">
                   <button type="button" class="lg:hidden font-bold text-white text-[9px] py-1" id="btnZoom">
                     BUY NOW
                   </button>
@@ -800,7 +799,7 @@
                 <img src="public/assets/canva.webp" alt="" class="w-[50%] p-2">
               </div>
               <div class="flex flex-col gap-1">
-                <h3 class="font-bold text-sm text-bold lg:text-2xl">Canva Premium</h3>
+                <h3 class="font-bold text-xs text-bold lg:text-2xl">Canva Premium</h3>
                 <div class="flex gap-2">
                   <h1
                     class="lg:hidden font-medium text-[#0cc44f] text-[8px] text-basic bg-[#8FEBB0] px-2 py-[1px] flex justify-center items-center rounded-full">
@@ -816,12 +815,12 @@
                     Hiburan</h1>
                 </div>
                 <div class="flex gap-3 items-center">
-                  <h1 class="font-bold text-sm text-red-600 text-bold lg:text-2xl"><s>Rp. 15.000</s></h1>
-                  <h1 class="font-bold text-sm text-bold lg:text-2xl">Rp. 5.000</h1>
+                  <h1 class="font-bold text-xs text-red-600 text-bold lg:text-2xl"><s>Rp. 15.000</s></h1>
+                  <h1 class="font-bold text-xs text-bold lg:text-2xl">Rp. 5.000</h1>
                 </div>
                 <div
                   class=" bg-[#C084FC] rounded-lg flex items-center justify-center hover:bg-[#B264FF] active:bg-[#A750FF]"
-                  onclick="openModalCanva()">
+                  onclick="openModalCheckout('canva')">
                   <button type="button" class="lg:hidden font-bold text-white text-[9px] py-1" id="btnCanva">
                     BUY NOW
                   </button>
@@ -860,7 +859,7 @@
                 <img src="public/assets/netflix.webp" alt="" class="w-[50%] p-2">
               </div>
               <div class="flex flex-col gap-1">
-                <h3 class="font-bold text-sm text-bold lg:text-2xl">Netflix Premium</h3>
+                <h3 class="font-bold text-xs text-bold lg:text-2xl">Netflix Premium</h3>
                 <div class="flex gap-2">
                   <h1
                     class="lg:hidden font-medium text-[#a78216] text-[8px] text-basic bg-[#FFDF82] px-2 flex justify-center items-center rounded-full">
@@ -870,12 +869,12 @@
                     Hiburan</h1>
                 </div>
                 <div class="flex gap-3 items-center">
-                  <h1 class="font-bold text-sm text-red-600 text-bold lg:text-2xl"><s>Rp. 35.000</s></h1>
-                  <h1 class="font-bold text-sm text-bold lg:text-2xl">Rp. 28.000</h1>
+                  <h1 class="font-bold text-xs text-red-600 text-bold lg:text-2xl"><s>Rp. 35.000</s></h1>
+                  <h1 class="font-bold text-xs text-bold lg:text-2xl">Rp. 28.000</h1>
                 </div>
                 <div
                   class=" bg-[#C084FC] rounded-lg flex items-center justify-center hover:bg-[#B264FF] active:bg-[#A750FF]"
-                  onclick="openModalNetflix()">
+                  onclick="openModalCheckout('netflix')">
                   <button type="button" class="lg:hidden font-bold text-white text-[9px] py-1" id="btnNetflix">
                     BUY NOW
                   </button>
@@ -936,170 +935,17 @@
       </div>
   </footer>
   <!-- footer end -->
-
-  <!-- script strt -->
-  <script>
-    // modal
-    let quantity = 1;
-    let pricePerUnit = 0; // Harga default untuk 1 Bulan
-
-    function togglePackage(packageId) {
-      // Menangani logika toggle aktif/non-aktif
-      const buttons = document.querySelectorAll('.modal-body button[id^="bulan"]');
-      for (const button of buttons) {
-        if (button.id === packageId) {
-          button.classList.add('active');
-        } else {
-          button.classList.remove('active');
-        }
-      }
-
-      // Panggil fungsi updateSubtotal jika perlu
-      updateSubtotal();
-    }
-
-    function updateSubtotal() {
-      const jumlahElement = document.getElementById('jumlah');
-      const subtotalElement = document.getElementById('subtotal');
-      const selectedPackage = getSelectedPackage(); // Mendapatkan paket yang dipilih
-      console.log(selectedPackage);
-      if (selectedPackage === 'bulan1') {
-        pricePerUnit = 1000;
-      } else if (selectedPackage === 'bulan2') {
-        pricePerUnit = 2000;
-      } else if (selectedPackage === 'bulan3') {
-        pricePerUnit = 3000;
-      }
-      quantity = Math.max(parseInt(jumlahElement.value), 1);
-      const subtotal = quantity * pricePerUnit;
-      subtotalElement.textContent = subtotal;
-    }
-
-    function toggleAndCalculate(packageId) {
-      // Menangani logika toggle aktif/non-aktif
-      const buttons = document.querySelectorAll('.modal-body button.package-button');
-      for (const button of buttons) {
-        if (button.id === packageId) {
-          button.classList.add('active');
-        } else {
-          button.classList.remove('active');
-        }
-      }
-
-      // Panggil fungsi updateSubtotal jika perlu
-      updateSubtotal();
-    }
-
-    function increaseQuantity() {
-      const jumlahElement = document.getElementById('jumlah');
-      quantity = parseInt(jumlahElement.value) + 1;
-      jumlahElement.value = quantity;
-      updateSubtotal();
-    }
-
-    function decreaseQuantity() {
-      const jumlahElement = document.getElementById('jumlah');
-      quantity = Math.max(parseInt(jumlahElement.value) - 1, 1);
-      jumlahElement.value = quantity;
-      updateSubtotal();
-    }
-
-    function resetQuantity() {
-      const jumlahElement = document.getElementById('jumlah');
-      jumlahElement.value = 1;
-      updateSubtotal();
-    }
-
-    function getSelectedPackage() {
-      // Mendapatkan paket yang dipilih dari id button yang aktif
-      const buttons = document.querySelectorAll('.modal-body button[id^="bulan"]');
-
-      for (const button of buttons) {
-        if (button.classList.contains('active')) {
-          return button.id;
-        }
-      }
-      return null;
-    }
-
-    // function testPac() {
-    //   const testPack = getSelectedPackage();
-    //   console.log(testPack);
-    // }
-
-    window.onscroll = function () {
-      const header = document.querySelector('header');
-      const fixedNav = header.offsetTop;
-
-      if (window.pageYOffset > fixedNav) {
-        header.classList.add('navbar-fixed');
-      } else {
-        header.classList.remove('navbar-fixed');
-      }
-    };
-
-    // close
-    function toggleModalCart() {
-      const modal = document.getElementById('spotyfy1');
-      modal.classList.toggle('hidden');
-    }
-    //tampil
-    function openModalSpotify() {
-      const modalSpotify = document.getElementById('spotyfy1');
-      modalSpotify.classList.remove('hidden');
-      
-    }
-
-    // function toggleModalCart(nameOfProduct, price) {
-    //   var modal = document.getElementById('modal');
-    //   var modalContent = modal.querySelector('.modal-content');
-
-    //   if (modal.style.display === 'none' || modal.style.display === '') {
-    //     // Show modal and update content
-    //     modal.classList.remove('hidden');
-    //   } else {
-    //     // Hide modal
-    //     modal.classList.add('hidden');
-    //     modalContent.innerHTML = ''; // Reset modal content
-    //   }
-    // }
-    function WhatsAppNotification(name, email, phone, orderID, date, status, total) {
-      var phone = "+6289507318790";
-      var message = `🛍 PURCHASE NOTIFICATION
-  ========================
-  
-  Hello Admin,
-  There is a new buyer.
-  
-  👤 Buyer Data:
-  Name: ${name}
-  Email: ${email}
-  Phone: ${phone}
-  
-  📦 Order Detail:
-  Order ID: ${orderID}
-  Date: ${date}
-  Status: ${status}
-  Total: Rp. ${total}`;
-      var url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
-      window.open(url, '_blank');
-    }
-  </script>
-  <!-- script end -->
-
-
-  <div id="spotyfy1" class="modal fixed w-full h-full top-0 left-0 items-center justify-center z-[999] hidden">
+  <div id="modal" class="modal fixed w-full h-full top-0 left-0 items-center justify-center z-[999] hidden">
     <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity flex"></div>
     <div class="fixed inset-0 overflow-y-auto md:top-16 lg:top-10">
       <div class="modal-container bg-white md:max-w-md mx-auto rounded-lg shadow-lg overflow-y-auto w-full relative ">
         <div class="modal-content text-left">
           <div id="tetap"
             class="garis  modal-header flex justify-between items-center px-5  bg-white p-5 w-full fixed rounded-t-lg md:max-w-md z-50">
-            <h2 class="text-2xl font-bold ">Spotify Premium</h2>
-            <button onclick="toggleModalCart()">✖️</button>
+            <h2 class="text-2xl font-bold " id="modal-title">Checkout</h2>
+            <button onclick="closeModalCheckout()"
+              class="text-2xl font-bold text-gray-500 hover:text-gray-700 focus:outline-none">&times;</button>
           </div>
-
-
           <div class="modal-body px-5 pt-24  ">
             <div class=" flex flex-col gap-y-5 ">
               <!-- pilih paket produk start -->
@@ -1107,118 +953,78 @@
                 <div class="flex gap-2">
                   <h1 class="text-lg">1. Pilih Paket Product</h1>
                 </div>
-                <div class="flex   items-center  gap-2 mt-2">
-                  <label for="product" class="text-sm">Garansi</label>
-                  <input type="checkbox" name="product" id="product" class="form-checkbox" label="product">
+                <div class="flex items-center  gap-2 mt-2">
+                  <input type="checkbox" name="garansi" id="garansi" value="bergaransi">
+                  <label for="garansi" class="text-sm">Garansi</label>
                 </div>
-                <div class="grid grid-cols-2 gap-2 mt-3">
-                  <button id="bulan1" onclick="toggleAndCalculate('bulan1')"
-                    class="package-button border p-2 px-3 flex border-gray-500 rounded-lg items-center gap-3 active:bg-violet-100 hover:bg-violet-50  hover:border-violet-400">
-                    <lord-icon src="https://cdn.lordicon.com/evyuuwna.json" trigger="hover">
-                    </lord-icon>
-                    <div class="flex flex-col items-start">
-                      <h1 class="text-md">Individual</h1>
-                      <h1 class="text-xs">1 Bulan</h1>
-                    </div>
-                  </button>
-                  <button id="bulan2" onclick="toggleAndCalculate('bulan2')"
-                    class="package-button border p-2 px-3 flex border-gray-500 rounded-lg items-center gap-3 active:bg-violet-100 hover:bg-violet-50  hover:border-violet-400">
-                    <lord-icon src="https://cdn.lordicon.com/evyuuwna.json" trigger="hover">
-                    </lord-icon>
-                    <div class="flex flex-col items-start">
-                      <h1 class="text-md">Individual</h1>
-                      <h1 class="text-xs">2 Bulan</h1>
-                    </div>
-                  </button>
-                  <button id="bulan3" onclick="toggleAndCalculate('bulan3')"
-                    class="package-button border p-2 px-3 flex border-gray-500 rounded-lg items-center gap-3 active:bg-violet-100 hover:bg-violet-50  hover:border-violet-400">
-                    <lord-icon src="https://cdn.lordicon.com/evyuuwna.json" trigger="hover">
-                    </lord-icon>
-                    <div class="flex flex-col items-start">
-                      <h1 class="text-md">Individual</h1>
-                      <h1 class="text-xs">3 Bulan</h1>
-                    </div>
-                  </button>
-                </div>
+                <div class="grid grid-cols-2 gap-2 mt-3" id="product-content"></div>
               </div>
 
               <div class="border py-4 px-3 border-gray-500 rounded-lg ">
                 <div class="flex gap-2">
                   <h1 class="text-lg">2. Pilih Jumlah Product</h1>
                 </div>
-                <div
-                  class="w-full my-2 border flex border-gray-500 rounded-lg items-center justify-between  bg-red-500 grid-cols-4">
+                <div class="my-2 border flex border-gray-500 rounded-lg items-center overflow-x-hidden">
                   <button
-                    class=" border-r-2 border-gray-400  py-2 px-3  active:bg-slate-400 hover:bg-slate-400 hover:text-white font-semibold"
+                    class=" border-r-2 border-gray-400  py-2 px-2 md:px-5 active:bg-slate-400 hover:bg-slate-400 hover:text-white font-semibold"
                     onclick="decreaseQuantity()">-</button>
-                  <input type="number" name="jumlah" id="jumlah" aria-label="jumlah" class="text-center " value="1"
+                  <input type="number" name="jumlah" id="jumlah" aria-label="jumlah" class="text-center w-full" value="1"
                     oninput="updateSubtotal()">
-                  <div class="flex grid-cols-2">
-                    <button
-                      class=" border-l-2 border-gray-400  py-2 px-3  active:bg-slate-400 hover:bg-slate-400 hover:text-white font-semibold"
-                      onclick="increaseQuantity()">+</button>
-                    <button
-                      class=" border-l-2 border-gray-400  py-[0.6rem] justify-center items-center px-4 active:bg-slate-400 hover:bg-slate-400 hover:text-white font-semibold text-black"
-                      onclick="resetQuantity()">
-                      <span><svg viewBox="-24 0 512 512" xmlns="http://www.w3.org/2000/svg"
-                          class="fill-current w-5 h-5">
-                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                          <g id="SVGRepo_iconCarrier">
-                            <title>replay</title>
-                            <path
-                              d="M232 448Q186 448 148 425 109 402 87 363 64 324 64 278L64 256 112 256 112 280Q112 331 147 366 182 400 233 400 265 400 293 384 320 367 336 340 352 313 352 281 352 230 318 195 283 160 232 160L232 232 136 136 232 40 232 112Q279 112 317 134 355 157 378 196 400 234 400 280 400 327 378 364 356 403 317 426 277 448 232 448Z">
-                            </path>
-                          </g>
-                        </svg>
-                      </span>
-                    </button>
-                  </div>
+                  <button
+                    class=" border-l-2 border-gray-400  py-2 px-3 md:px-5 active:bg-slate-400 hover:bg-slate-400 hover:text-white font-semibold"
+                    onclick="increaseQuantity()">+</button>
+                  <button
+                    class=" border-l-2 border-gray-400 flex px-3 py-[0.6rem] justify-center items-center active:bg-slate-400 hover:bg-slate-400 hover:text-white font-semibold text-black"
+                    onclick="resetQuantity()">
+                    <span><svg viewBox="-24 0 512 512" xmlns="http://www.w3.org/2000/svg" class="fill-current w-5 h-5">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <title>replay</title>
+                          <path
+                            d="M232 448Q186 448 148 425 109 402 87 363 64 324 64 278L64 256 112 256 112 280Q112 331 147 366 182 400 233 400 265 400 293 384 320 367 336 340 352 313 352 281 352 230 318 195 283 160 232 160L232 232 136 136 232 40 232 112Q279 112 317 134 355 157 378 196 400 234 400 280 400 327 378 364 356 403 317 426 277 448 232 448Z">
+                          </path>
+                        </g>
+                      </svg>
+                    </span>
+                  </button>
+
                 </div>
                 <div>
                   <p>Subtotal</p>
-                  <p>Rp.<span id="subtotal">0</span></p>
+                  <p class="font-bold text-lg">Rp.<span id="subtotal">0</span></p>
                 </div>
-              </div>
-
-              <!-- masukan email -->
-              <div class="border py-4 px-5 border-gray-500 rounded-lg ">
-                <div class="flex gap-2 pb-3">
-                  <h1 class="text-lg">3. Masukkan Email</h1>
-                </div>
-                <input type="email" id="email" name="email" placeholder="Email Opsional"
-                  class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-rose-400 w-full">
               </div>
 
               <!-- metode pembayaran -->
               <div class="border py-4 px-5 border-gray-500 rounded-lg ">
                 <div class="flex gap-2">
-                  <h1 class="text-lg">4. Pilih Paket Product</h1>
+                  <h1 class="text-lg">3. Pilih Metode Pembayaran</h1>
                 </div>
                 <div class="grid grid-cols-2 gap-2 mt-3">
-                  <button id="qris"
-                    class="border p-3 px-5 flex border-gray-500 rounded-lg  items-center gap-2 active:bg-violet-100 hover:bg-violet-50  hover:border-violet-400">
+                  <button id="Qris" value="Qris"
+                    class="border button-pay p-3 px-5 flex border-gray-500 rounded-lg  items-center gap-2 active:bg-violet-100 hover:bg-violet-50  hover:border-violet-400">
                     <img src="./public/assets/qris.webp" alt="" class="w-12">
                     <div class="flex flex-col items-start">
                       <h1 class="text-[10px] text-gray-500">+500</h1>
                     </div>
                   </button>
-                  <button id="dana"
-                    class="  border p-3 px-5 flex border-gray-500 rounded-lg  items-center gap-2 active:bg-violet-100 hover:bg-violet-50  hover:border-violet-400">
+                  <button id="Dana" value="Dana"
+                    class=" border button-pay p-3 px-5 flex border-gray-500 rounded-lg  items-center gap-2 active:bg-violet-100 hover:bg-violet-50  hover:border-violet-400">
                     <img src="./public/assets/dana.webp" alt="" class="w-16">
                     <div class="flex flex-col items-start">
                       <h1 class="text-[10px] text-gray-500">+1000</h1>
                     </div>
                   </button>
-                  <button id="gopay"
-                    class="  border p-3 px-5 flex border-gray-500 rounded-lg  items-center gap-2 active:bg-violet-100 hover:bg-violet-50  hover:border-violet-400">
+                  <button id="Gopay" value="Gopay"
+                    class=" border button-pay p-3 px-5 flex border-gray-500 rounded-lg  items-center gap-2 active:bg-violet-100 hover:bg-violet-50  hover:border-violet-400">
                     <img src="./public/assets/gopay.webp" alt="" class="w-16">
                     <div class="flex flex-col items-start">
                       <h1 class="text-[10px] text-gray-500"></h1>
                     </div>
                   </button>
-                  <button id="paypal"
-                    class="  border p-3 px-5 flex border-gray-500 rounded-lg  items-center gap-2 active:bg-violet-100 hover:bg-violet-50  hover:border-violet-400">
+                  <button id="Paypal" value="Paypal"
+                    class=" border button-pay p-3 px-5 flex border-gray-500 rounded-lg  items-center gap-2 active:bg-violet-100 hover:bg-violet-50  hover:border-violet-400">
                     <img src="./public/assets/paypal.webp" alt="" class="w-16">
                     <div class="flex flex-col items-start">
                       <h1 class="text-[10px] text-gray-500">+2%</h1>
@@ -1229,8 +1035,9 @@
             </div>
 
             <!-- tombol beli -->
-            <div class="flex justify-end pb-5">
-              <button type="button" class="px-4 py-3 rounded-md bg-blue-500 text-white mt-5 hover:bg-blue-600">Beli
+            <div class="flex justify-end pb-5" onclick="">
+              <button type="button" class="px-4 py-3 rounded-md bg-blue-500 text-white mt-5 hover:bg-blue-600"
+                onclick="CheckoutButton()">Beli
                 Sekarang</button>
             </div>
 
@@ -1240,6 +1047,7 @@
     </div>
   </div>
 </body>
+
 <script>
   const paketSpotify = [
     {
@@ -1264,8 +1072,14 @@
 
   const paketYoutube = [
     {
+      name: 'Family',
+      price: 6000,
+      garansi: '7000',
+      duration: '1 Bulan',
+    },
+    {
       name: 'Individual',
-      price: 13000,
+      price: 15000,
       garansi: '20000',
       duration: '4 Bulan',
     },
@@ -1284,11 +1098,13 @@
     {
       name: 'Individual',
       price: 5000,
+      garansi: '7000',
       duration: '30 Hari',
     },
     {
       name: 'Individual',
       price: 7000,
+      garansi: '10000',
       duration: '45 Hari',
     },
   ];
@@ -1296,7 +1112,8 @@
   const paketNetflix = [
     {
       name: 'Individual',
-      price: 28000,
+      price: 23000,
+      garansi: '23000',
       duration: '1 Bulan',
     },
   ];
@@ -1310,55 +1127,237 @@
     },
   ];
 
-  //open modal
-  function openModalCheckout() {
-    var modal = document.getElementById('modal');
-    var modalContent = modal.querySelector('.modal-content');
+  function openModalCheckout(productType) {
+    const modal = document.getElementById('modal');
+    const productContent = document.getElementById('product-content');
+    productContent.innerHTML = '';
 
-    if (modal.style.display === 'none' || modal.style.display === '') {
-      // Show modal and update content
-      modal.classList.remove('hidden');
-    } else {
-      // Hide modal
-      modal.classList.add('hidden');
-      modalContent.innerHTML = ''; // Reset modal content
+    let product = [];
+    switch (productType) {
+      case 'spotify':
+        product = paketSpotify;
+        break;
+      case 'youtube':
+        product = paketYoutube;
+        break;
+      case 'zoom':
+        product = paketZoom;
+        break;
+      case 'canva':
+        product = paketCanva;
+        break;
+      case 'netflix':
+        product = paketNetflix;
+        break;
+      case 'viu':
+        product = paketViu;
+        break;
+      default:
+        break;
     }
+
+    const garansi = document.getElementById('garansi');
+    garansi.checked ? createButtons(product, 'garansi', productContent) : createButtons(product, 'price', productContent);
+    const modalTitle = document.getElementById('modal-title');
+    modalTitle.textContent = `Checkout ${productType.charAt(0).toUpperCase() + productType.slice(1)}`;
+    modal.classList.remove('hidden');
   }
 
 
-  // Ambil data email
+  // Dapatkan checkbox garansi
+  const garansiCheckbox = document.getElementById('garansi');
+  garansiCheckbox.addEventListener('change', function () {
+    const productContent = document.getElementById('product-content');
+    const product = paketSpotify;
+    updateSubtotal(product, this.checked ? 'garansi' : 'price', productContent);
+  });
+
+
+  function createButtons(product, priceType, productContent) {
+    product.forEach((paket) => {
+      const elem = document.createElement('button');
+      elem.classList.add('package-button');
+      elem.id = `paket-${paket.duration}`;
+      elem.setAttribute('data-price', priceType === 'garansi' ? paket.garansi : paket.price);
+      elem.setAttribute('data-garansi', paket.garansi);
+      elem.innerHTML = `
+            <button class="package-button border p-2 px-3 flex border-gray-500 rounded-lg items-center gap-3 active:bg-violet-100 hover:bg-violet-50  hover:border-violet-400 w-full">
+                <lord-icon src="https://cdn.lordicon.com/evyuuwna.json" trigger="hover"></lord-icon>
+                <div class="flex flex-col items-start">
+                    <h1 class="text-md">${paket.name}</h1>
+                    <h1 class="text-xs">${paket.duration}</h1>
+                </div>
+            </button>
+        `;
+      elem.addEventListener('click', () => {
+        togglePackage(elem.id, elem.getAttribute('data-price'), elem.getAttribute('data-garansi'));
+      });
+      productContent.appendChild(elem);
+    });
+  }
+
+
+  function closeModalCheckout() {
+    const modal = document.getElementById('modal');
+    modal.classList.add('hidden');
+  }
+
+  let quantity = 1;
+  let pricePerUnit = 0;
+
+  function togglePackage(packageId, price) {
+    const buttons = document.querySelectorAll('.modal-body .package-button');
+    for (const button of buttons) {
+      if (button.id === packageId) {
+        button.classList.add('active');
+      } else {
+        button.classList.remove('active');
+      }
+    }
+
+    updateSubtotal(price);
+  }
+
+  function increaseQuantity() {
+    const jumlahElement = document.getElementById('jumlah');
+    quantity = parseInt(jumlahElement.value) + 1;
+    jumlahElement.value = quantity;
+    setTimeout(() => {
+      updateSubtotal();
+    }, 0);
+  }
+
+  function decreaseQuantity() {
+    const jumlahElement = document.getElementById('jumlah');
+    quantity = Math.max(parseInt(jumlahElement.value) - 1, 1);
+    jumlahElement.value = quantity;
+    setTimeout(() => {
+      updateSubtotal();
+    }, 0);
+  }
+
+  function resetQuantity() {
+    const jumlahElement = document.getElementById('jumlah');
+    jumlahElement.value = 1;
+    setTimeout(() => {
+      updateSubtotal();
+    }, 0);
+  }
+
+  function updateSubtotal() {
+    const jumlahElement = document.getElementById('jumlah');
+    const subtotalElement = document.getElementById('subtotal');
+    const activeButton = document.querySelector('.package-button.active');
+    if (activeButton) {
+      const priceType = document.getElementById('garansi').checked ? 'garansi' : 'price';
+      const price = activeButton.getAttribute(`data-${priceType}`);
+      pricePerUnit = parseInt(price);
+      quantity = Math.max(parseInt(jumlahElement.value), 1);
+      const subtotal = quantity * pricePerUnit;
+      subtotalElement.textContent = subtotal;
+
+    }
+  }
+
+  //toggleMethodPayment
+  const methodPayment = document.querySelectorAll('.button-pay');
+  methodPayment.forEach((button) => {
+    button.addEventListener('click', () => {
+      methodPayment.forEach((btn) => {
+        btn.classList.remove('active');
+      });
+      button.classList.add('active');
+    });
+  });
+
+  function CheckoutButton() {
+    //beri validasi jika ada yang belum diisi
+
+    if (document.querySelector('.package-button.active') === null) {
+      alert('Pilih paket terlebih dahulu');
+      return;
+    }
+
+    if (document.querySelector('.button-pay.active') === null) {
+      alert('Pilih metode pembayaran terlebih dahulu');
+      return;
+    }
+
+    if (document.getElementById('jumlah').value === '') {
+      alert('Jumlah tidak boleh kosong');
+      return;
+    }
+
+    const modalTitle = document.getElementById('modal-title');
+    const product = modalTitle.textContent.split(' ')[1].toUpperCase();
+    const duration = document.querySelector('.package-button.active').id.split('-')[1];
+    const paket = document.querySelector('.package-button.active h1').textContent;
+    const quantity = document.getElementById('jumlah').value;
+    const price = pricePerUnit;
+    const total = document.getElementById('subtotal').textContent;
+    const payment = document.querySelector('.button-pay.active').id;
+    const status = document.getElementById('garansi').checked ? 'Garansi' : 'Tidak Garansi';
+    WhatsAppNotification(paket, product, total, quantity, price, status, duration, payment);
+  }
+
+  window.onscroll = function () {
+    const header = document.querySelector('header');
+    const fixedNav = header.offsetTop;
+
+    if (window.pageYOffset > fixedNav) {
+      header.classList.add('navbar-fixed');
+    } else {
+      header.classList.remove('navbar-fixed');
+    }
+  };
+
+  //ambil data dari input email
   const email = document.getElementById('email');
-  email.addEventListener('input', () => {
+  email.addEventListener('input', function () {
     console.log(email.value);
   });
+  // buatkan variabel yang mengambil tanggal sekarang
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var yyyy = today.getFullYear();
 
-  // Ambil data jumlah
-  const jumlah = document.getElementById('jumlah');
-  jumlah.addEventListener('input', () => {
-    console.log(jumlah.value);
-  });
 
-  // Ambil data metode pembayaran
-  const metodePembayaran = ['qris', 'dana', 'gopay', 'paypal'];
+  function WhatsAppNotification(paket, product, total, quantity, harga, status, durasi, payment) {
+    harga = harga.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    total = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-  metodePembayaran.forEach((metode) => {
-    const elem = document.getElementById(metode);
-    elem.addEventListener('click', () => {
-      console.log(metode.toUpperCase());
-    });
-  });
+    //sekalian kasih payment detail
+    //di paymet detail kasih metode pembayaran sekalian iconnya
+    var phone = "+6288245251268";
+    var message = `📦 *PURCHASE NOTIFICATION* 📦
+---------------------------------------
+👋 Hello Admin,
 
-  // Ambil data paket produk
-  const paketProduk = ['product'];
-  paketProduk.forEach((paket) => {
-    const elem = document.getElementById(paket);
-    elem.addEventListener('click', () => {
-      console.log(paket.toUpperCase());
-    });
-  });
+🎉 There is a new purchase!.
+Here are the details:
+
+📝 *Order Detail*:
+    🛒 Product: ${product}
+    📦 Package: ${paket}
+    ⏳ Duration: ${durasi}
+    📅 Date: ${dd}-${mm}-${yyyy}
+
+💵 *Payment Detail*:
+    💰 Price: Rp. ${harga}
+    🛍 Quantity: ${quantity}
+    📝 Status: ${status}
+    💳 Payment Metod : ${payment}
+    💸 Total: Rp. ${total}
+
+🚀 Thank you for your attention!`;
+    var url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  }
 
 </script>
-<script src="src/css/js/script.js"></script>
+
 <script src="https://cdn.lordicon.com/lordicon.js"></script>
+
 
 </html>
